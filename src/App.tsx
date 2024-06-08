@@ -1,9 +1,10 @@
 import './App.scss';
+import Landing from './components/Landing';
 
 function App() {
   return (
     <>
-      <div>hello world</div>
+      <Landing />
     </>
   );
 }
