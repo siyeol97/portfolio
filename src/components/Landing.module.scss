@@ -9,11 +9,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0);
+  text-wrap: nowrap;
 
   & h1 {
     position: relative;
     color: #f1f1f1;
-    transform: skew(var(--degree));
+    transform: skew(var(--degree)) scale(var(--scale));
+    font-weight: 400;
+    font-family: 'Orbitron';
   }
 
   & h1::before,
@@ -45,5 +48,11 @@
       100% var(--ab),
       0 var(--ab)
     );
+  }
+
+  @include mobile {
+    & h1 {
+      font-size: 2.5rem;
+    }
   }
 }
