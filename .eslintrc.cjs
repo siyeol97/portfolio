@@ -18,5 +18,6 @@ module.exports = {
       'error',
       { singleQuote: true, singleAttributePerLine: true, jsxSingleQuote: true },
     ],
+    'react-hooks/exhaustive-deps': 'off',
   },
 };
