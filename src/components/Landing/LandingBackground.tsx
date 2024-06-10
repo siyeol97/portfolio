@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { Rain, initRain, renderRain } from '../utils/Rain';
 import styles from './LandingBackground.module.scss';
-import { RainDrop } from '../utils/RainDrop';
-import { Thunder } from '../utils/Thunder';
+import { Rain, initRain, renderRain } from '../../utils/Rain';
+import { RainDrop } from '../../utils/RainDrop';
+import { Thunder } from '../../utils/Thunder';
 
 export default function LandingBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

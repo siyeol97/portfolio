@@ -1,7 +1,7 @@
+import { useEffect } from 'react';
 import LandingBackground from './LandingBackground';
 import styles from './Landing.module.scss';
-import { useEffect } from 'react';
-import glitch from '../utils/glitch';
+import glitch from '../../utils/glitch';
 
 export default function Landing() {
   useEffect(() => {
