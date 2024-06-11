@@ -1,0 +1,26 @@
+@import '../../styles/main.scss';
+
+.intro_text {
+  float: right;
+  text-align: right;
+  & span {
+    font-family: 'Inter';
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  & p {
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    font-weight: 300;
+    &::after {
+      content: '';
+      display: block;
+      width: 10%;
+      border-bottom: 1px solid #191919;
+      margin-top: 10px;
+      margin-left: auto;
+    }
+  }
+}

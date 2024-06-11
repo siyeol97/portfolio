@@ -1,0 +1,80 @@
+@import '../../styles/main.scss';
+
+.intro_text {
+  & span {
+    font-family: 'Inter';
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  & p {
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    font-weight: 200;
+    &::after {
+      content: '';
+      display: block;
+      width: 10%;
+      border-bottom: 1px solid #f1f1f1;
+      margin-top: 10px;
+    }
+  }
+}
+
+.overview {
+  @include flex($align: flex-start);
+  gap: 100px;
+  padding: 100px 0;
+  word-break: keep-all;
+
+  & > .overview_text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  & span {
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-weight: 200;
+    &::after {
+      content: '';
+      display: block;
+      width: 30px;
+      border-bottom: 1px solid #f1f1f1;
+      margin-top: 5px;
+    }
+  }
+}
+
+.skills {
+  @include flex($justify: flex-start);
+  gap: 50px;
+  padding-bottom: 50px;
+  & span {
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-weight: 200;
+    &:last-child:after {
+      content: '';
+      display: block;
+      width: 20px;
+      border-bottom: 1px solid #f1f1f1;
+      margin-top: 5px;
+    }
+  }
+
+  & .skills_img {
+    & ul {
+      @include flex();
+      gap: 30px;
+    }
+
+    & li {
+      display: inline;
+      & img {
+        width: 104px;
+      }
+    }
+  }
+}
