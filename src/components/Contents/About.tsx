@@ -29,14 +29,14 @@ export default function About() {
           개발자로 일하고 싶습니다."
         </article>
         <div>
-          <span>overview</span>
+          <span>Overview</span>
         </div>
       </section>
       <section className={styles.skills}>
         <div>
-          <span>skills &</span>
+          <span>Skills &</span>
           <br />
-          <span>tools</span>
+          <span>Tools</span>
         </div>
         <div className={styles.skills_img}>
           <ul>

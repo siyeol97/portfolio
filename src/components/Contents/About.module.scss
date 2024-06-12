@@ -2,20 +2,20 @@
 
 .intro_text {
   & span {
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-size: 7rem;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1;
   }
 
   & p {
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 300;
     &::after {
       content: '';
       display: block;
-      width: 10%;
+      width: 5%;
       border-bottom: 1px solid #f1f1f1;
       margin-top: 10px;
     }
@@ -28,14 +28,14 @@
   padding: 100px 0;
   word-break: keep-all;
 
-  & > .overview_text {
-    font-size: 1.25rem;
-    line-height: 1.5;
+  & .overview_text {
+    font-size: 1.125rem;
+    line-height: 1.7;
   }
 
   & span {
     font-size: 1rem;
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-weight: 200;
     &::after {
       content: '';
@@ -48,12 +48,12 @@
 }
 
 .skills {
-  @include flex($justify: flex-start);
+  @include flex($align: flex-start, $justify: flex-start);
   gap: 50px;
   padding-bottom: 50px;
   & span {
     font-size: 1rem;
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-weight: 200;
     &:last-child:after {
       content: '';

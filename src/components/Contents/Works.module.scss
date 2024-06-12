@@ -1,26 +1,111 @@
 @import '../../styles/main.scss';
 
-.intro_text {
-  float: right;
+.works_intro {
   text-align: right;
   & span {
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-size: 7rem;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1;
   }
 
   & p {
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-size: 1.25rem;
-    font-weight: 300;
     &::after {
       content: '';
       display: block;
-      width: 10%;
+      width: 5%;
       border-bottom: 1px solid #191919;
       margin-top: 10px;
       margin-left: auto;
+    }
+  }
+}
+
+.first_work {
+  @include flex($align: flex-start);
+  gap: 100px;
+  padding: 100px 0;
+  word-break: keep-all;
+
+  & .during {
+    & span {
+      font-size: 1rem;
+      font-family: 'Montserrat';
+      &:last-child:after {
+        content: '';
+        display: block;
+        width: 30px;
+        border-bottom: 1px solid #191919;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  & .first_work_box {
+    @include flex($align: flex-start);
+    gap: 40px;
+    flex-direction: column;
+    & div {
+      & .project_title {
+        @include flex($justify: flex-start, $align: flex-start);
+        gap: 0.5rem;
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+        & h4 {
+          font-family: 'Montserrat';
+          font-weight: 700;
+          line-height: 0.5;
+          margin-bottom: 1.25rem;
+        }
+      }
+      & span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    & .explain {
+      @include flex($align: flex-start);
+      flex-direction: column;
+      gap: 30px;
+      & .first_work_skills,
+      & .my_role {
+        @include flex($align: flex-start);
+        gap: 30px;
+        line-height: 1.7;
+        & span {
+          width: 100px;
+          font-family: 'Montserrat';
+          white-space: nowrap;
+          font-size: 1.125rem;
+          font-weight: 500;
+          &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            border-bottom: 1px solid #191919;
+            margin-top: 5px;
+          }
+        }
+        & ul {
+          list-style: circle;
+          display: grid;
+          grid-template-columns: auto auto;
+          & li {
+            font-size: 1rem;
+            margin-right: 30px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      & .first_work_skills ul li {
+        font-family: 'Montserrat';
+      }
     }
   }
 }
