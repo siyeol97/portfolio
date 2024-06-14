@@ -1,6 +1,6 @@
 const glitch = (element: HTMLElement) => {
   let count = 0;
-  setMontserratval(() => {
+  setInterval(() => {
     const degree = Math.random() * 20 - 10;
     const beforeTop = Math.random() * 100;
     const beforeBottom = Math.random() * 100;
