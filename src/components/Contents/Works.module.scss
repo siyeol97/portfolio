@@ -24,8 +24,9 @@
   }
 }
 
+// first_work
 .first_work {
-  @include flex($align: flex-start);
+  @include flex($align: flex-start, $justify: flex-start);
   gap: 100px;
   padding: 50px 0;
   word-break: keep-all;
@@ -111,8 +112,9 @@
   }
 }
 
+// second_work
 .second_work {
-  @include flex($align: flex-start);
+  @include flex($align: flex-start, $justify: flex-end);
   gap: 100px;
   padding: 50px 0;
   word-break: keep-all;
@@ -147,7 +149,7 @@
         & h4 {
           font-family: 'Montserrat';
           font-weight: 700;
-          line-height: 0.5;
+          line-height: 0.7;
           margin-bottom: 1.25rem;
         }
       }
@@ -201,8 +203,9 @@
   }
 }
 
+// third_work
 .third_work {
-  @include flex($align: flex-start);
+  @include flex($align: flex-start, $justify: flex-start);
   gap: 100px;
   padding: 50px 0;
   word-break: keep-all;
@@ -211,6 +214,7 @@
     & span {
       font-size: 1rem;
       font-family: 'Montserrat';
+      white-space: nowrap;
       &:last-child:after {
         content: '';
         display: block;
@@ -236,7 +240,7 @@
         & h4 {
           font-family: 'Montserrat';
           font-weight: 700;
-          line-height: 0.5;
+          line-height: 0.7;
           margin-bottom: 1.25rem;
         }
       }
@@ -283,6 +287,96 @@
       }
 
       & .third_work_skills ul li {
+        font-family: 'Montserrat';
+      }
+    }
+  }
+}
+
+// fourth_work
+.fourth_work {
+  @include flex($align: flex-start, $justify: flex-end);
+  gap: 100px;
+  padding: 50px 0;
+  word-break: keep-all;
+
+  & .during {
+    & span {
+      font-size: 1rem;
+      font-family: 'Montserrat';
+      &:last-child:after {
+        content: '';
+        display: block;
+        width: 30px;
+        border-bottom: 1px solid #191919;
+        margin-top: 10px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  & .fourth_work_box {
+    @include flex($align: flex-end);
+    gap: 40px;
+    flex-direction: column;
+    & div {
+      & .project_title {
+        @include flex($justify: flex-end, $align: baseline);
+        gap: 0.5rem;
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+        & h4 {
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 0.875rem;
+        }
+      }
+      & span {
+        font-size: 1rem;
+        text-align: right;
+        font-weight: 500;
+      }
+    }
+
+    & .explain {
+      @include flex($align: flex-end);
+      flex-direction: column;
+      gap: 30px;
+      & .fourth_work_skills,
+      & .my_role {
+        @include flex($align: flex-start);
+        gap: 30px;
+        line-height: 1.7;
+        & span {
+          width: 100px;
+          font-family: 'Montserrat';
+          white-space: nowrap;
+          font-size: 1.125rem;
+          font-weight: 500;
+          &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            border-bottom: 1px solid #191919;
+            margin-top: 5px;
+            margin-left: auto;
+          }
+        }
+        & ul {
+          list-style: circle;
+          display: grid;
+          grid-template-columns: auto auto;
+          & li {
+            font-size: 1rem;
+            margin-right: 30px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      & .fourth_work_skills ul li {
         font-family: 'Montserrat';
       }
     }
