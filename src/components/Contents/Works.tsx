@@ -3,6 +3,7 @@ import styles from './Works.module.scss';
 import githubImg from '../../public/Github-Dark.svg';
 import partyTimeJobLogo from '../../public/partyTimeJobLogo.png';
 import mogazoaImg from '../../public/mogazoaLogo.png';
+import SDlogo from '../../public/SDlogo.jpeg';
 
 export default function Works() {
   return (
@@ -155,8 +156,8 @@ export default function Works() {
                   target='_blank'
                 >
                   <img
-                    src={mogazoaImg}
-                    alt='mogazoa-image'
+                    src={SDlogo}
+                    alt='SD-logo'
                   />
                 </a>
                 <a
