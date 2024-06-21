@@ -164,7 +164,7 @@ export default function Works() {
                     alt='SD-logo'
                   />
                 </a>
-                <h4>Siyeol’s Dev-log</h4>
+                <h4 className={styles.eng_font}>Siyeol’s Dev-log</h4>
               </div>
               <span>개인 블로그</span>
             </div>
