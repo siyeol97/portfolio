@@ -8,7 +8,7 @@ import SDlogo from '../../public/SDlogo.jpeg';
 export default function Works() {
   return (
     <>
-      {/* work_1 */}
+      {/* work_1,2 */}
       <Detail backgroundColor='#f1f1f1'>
         <section className={styles.works_intro}>
           <h1>
@@ -18,13 +18,13 @@ export default function Works() {
           </h1>
           <p>My journey</p>
         </section>
-        <section className={styles.first_work}>
+        <section className={styles.left_sort}>
           <div className={styles.during}>
             <span>2024.04.11</span>
             <br />
             <span>~ 2024.05.17</span>
           </div>
-          <div className={styles.first_work_box}>
+          <div className={styles.left_sort_box}>
             <div>
               <div className={styles.project_title}>
                 <h4>mogazoa</h4>
@@ -53,7 +53,7 @@ export default function Works() {
               </span>
             </div>
             <div className={styles.explain}>
-              <div className={styles.first_work_skills}>
+              <div className={styles.left_sort_skills}>
                 <span>Used skills</span>
                 <ul>
                   <li>Next.js 14 (app-router)</li>
@@ -70,36 +70,28 @@ export default function Works() {
                   <li>유저 프로필 페이지 담당</li>
                   <li>Zustand를 이용하여 모달창의 전역상태관리</li>
                   <li>재사용 공통 컴포넌트 개발(Button, Modal, ProductCard)</li>
+                  <li>유저 프로필 정보 수정, 상품 추가/수정 기능 구현</li>
                   <li>
                     팔로우/팔로우 취소 기능 구현 팔로워 목록, 상품 목록
                     무한스크롤 구현
                   </li>
-                  <li>유저 프로필 정보 수정, 상품 추가/수정 기능 구현</li>
                   <li>카카오 간편 로그인/회원가입/공유 기능 구현</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
-      </Detail>
-      {/* work_2,3 */}
-      <Detail
-        color='#f1f1f1'
-        backgroundColor='#121212'
-      >
-        <section className={styles.second_work}>
-          <div className={styles.second_work_box}>
+        <section className={styles.left_sort}>
+          <div className={styles.during}>
+            <span>2024.03.07</span>
+            <br />
+            <span>~ 2024.03.25</span>
+          </div>
+          <div className={styles.left_sort_box}>
             <div>
               <div className={styles.project_title}>
-                <a
-                  href='https://github.com/Party-Time-Job/Party-Time-Job'
-                  target='_blank'
-                >
-                  <img
-                    src={githubImg}
-                    alt='github-image'
-                  />
-                </a>
+                <h4>party time job</h4>
+
                 <a
                   href='https://party-time-job-deploy.vercel.app/'
                   target='_blank'
@@ -109,12 +101,21 @@ export default function Works() {
                     alt='partyTimeJob-image'
                   />
                 </a>
-                <h4>party time job</h4>
+                <a
+                  href='https://github.com/Party-Time-Job/Party-Time-Job'
+                  target='_blank'
+                >
+                  <img
+                    src={githubImg}
+                    alt='github-image'
+                  />
+                </a>
               </div>
               <span>일자리가 급한 사람들을 위한 구인구직 플랫폼</span>
             </div>
             <div className={styles.explain}>
-              <div className={styles.second_work_skills}>
+              <div className={styles.left_sort_skills}>
+                <span>Used skills</span>
                 <ul>
                   <li>Next.js 14 (app-router)</li>
                   <li>Typescript</li>
@@ -122,44 +123,29 @@ export default function Works() {
                   <li>Husky</li>
                   <li>Eslint/Prettier</li>
                 </ul>
-                <span>Used skills</span>
               </div>
               <div className={styles.my_role}>
+                <span>My role</span>
                 <ul>
                   <li>공고 리스트, 상세 페이지 담당</li>
                   <li>공고 검색, 정렬, 필터링 기능 구현</li>
                   <li>로컬 스토리지를 이용한 최근 본 공고 기능 구현</li>
                   <li>공고 신청/취소 기능 구현</li>
                 </ul>
-                <span>My role</span>
               </div>
             </div>
           </div>
-          <div className={styles.during}>
-            <span>2024.03.07</span>
-            <br />
-            <span>~ 2024.03.25</span>
-          </div>
         </section>
-        <section className={styles.third_work}>
-          <div className={styles.during}>
-            <span>2024.02.11</span>
-            <br />
-            <span>~ in progress</span>
-          </div>
-          <div className={styles.third_work_box}>
+      </Detail>
+      {/* work_3,4 */}
+      <Detail
+        color='#f1f1f1'
+        backgroundColor='#121212'
+      >
+        <section className={styles.right_sort}>
+          <div className={styles.right_sort_box}>
             <div>
               <div className={styles.project_title}>
-                <h4>Siyeol’s Dev-log</h4>
-                <a
-                  href='https://siyeol-blog.vercel.app/'
-                  target='_blank'
-                >
-                  <img
-                    src={SDlogo}
-                    alt='SD-logo'
-                  />
-                </a>
                 <a
                   href='https://github.com/siyeol97/siyeol-blog'
                   target='_blank'
@@ -169,12 +155,21 @@ export default function Works() {
                     alt='github-image'
                   />
                 </a>
+                <a
+                  href='https://siyeol-blog.vercel.app/'
+                  target='_blank'
+                >
+                  <img
+                    src={SDlogo}
+                    alt='SD-logo'
+                  />
+                </a>
+                <h4>Siyeol’s Dev-log</h4>
               </div>
               <span>개인 블로그</span>
             </div>
             <div className={styles.explain}>
-              <div className={styles.third_work_skills}>
-                <span>Used skills</span>
+              <div className={styles.right_sort_skills}>
                 <ul>
                   <li>Next.js 14 (app-router)</li>
                   <li>Typescript</li>
@@ -185,9 +180,9 @@ export default function Works() {
                   <li>React-syntax-highlighter</li>
                   <li>Eslint/Prettier</li>
                 </ul>
+                <span>Used skills</span>
               </div>
               <div className={styles.my_role}>
-                <span>My role</span>
                 <ul>
                   <li>Github, Google, Credential 로그인 구현</li>
                   <li>포스트 본문, 글쓰기 미리보기 markdown view 구현</li>
@@ -198,15 +193,18 @@ export default function Works() {
                     글, 댓글 작성, 포스트 좋아요 기능 optimistic update 구현
                   </li>
                 </ul>
+                <span>My role</span>
               </div>
             </div>
           </div>
+          <div className={styles.during}>
+            <span>2024.02.11</span>
+            <br />
+            <span>~ in progress</span>
+          </div>
         </section>
-      </Detail>
-      {/* work_4 */}
-      <Detail backgroundColor='#f1f1f1'>
-        <section className={styles.fourth_work}>
-          <div className={styles.fourth_work_box}>
+        <section className={styles.right_sort}>
+          <div className={styles.right_sort_box}>
             <div>
               <div className={styles.project_title}>
                 <a
@@ -235,7 +233,7 @@ export default function Works() {
               </span>
             </div>
             <div className={styles.explain}>
-              <div className={styles.fourth_work_skills}>
+              <div className={styles.right_sort_skills}>
                 <ul>
                   <li>React-Native, Expo</li>
                   <li>Javascript</li>
