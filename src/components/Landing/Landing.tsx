@@ -23,6 +23,7 @@ export default function Landing() {
         >
           Hello world!
         </h1>
+        <h2></h2>
       </div>
       <LandingBackground />
     </section>
