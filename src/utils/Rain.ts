@@ -13,6 +13,7 @@ export class Rain {
     y: number;
     isActive: boolean;
   };
+  color: string;
 
   constructor(
     x: number,
@@ -25,6 +26,7 @@ export class Rain {
       y: number;
       isActive: boolean;
     },
+    color: string,
   ) {
     this.x = x;
     this.y = y;
@@ -32,14 +34,15 @@ export class Rain {
     this.ctx = ctx;
     this.drops = drops;
     this.mouse = mouse;
+    this.color = color;
   }
 
-  draw() {
+  draw(color: string) {
     const { x, y, velocity, ctx } = this;
     ctx.beginPath();
     ctx.moveTo(x, y);
-    ctx.lineTo(x + velocity.x * 0.5, y + velocity.y * 2);
-    ctx.strokeStyle = '#8899a6';
+    ctx.lineTo(x, y + velocity.y * randomBetween(-1, -5));
+    ctx.strokeStyle = color;
     ctx.lineWidth = 1.5;
     ctx.stroke();
   }
@@ -48,7 +51,7 @@ export class Rain {
     for (let i = 0; i < 3; i++) {
       const velocity = {
         x: -this.velocity.x + randomBetween(-2, 2),
-        y: -this.velocity.y + randomBetween(5, 10),
+        y: -this.velocity.y + randomBetween(1, 100),
       };
       this.drops.push(new RainDrop(this.x, innerHeight, velocity, this.ctx));
     }
@@ -57,17 +60,18 @@ export class Rain {
   animate() {
     if (this.y > innerHeight) {
       this.splash();
-      this.x = randomBetween(-innerWidth * 0.2, innerWidth * 1.2);
+      this.x = randomBetween(-innerWidth * 0.3, innerWidth * 1.3);
       this.y = -20;
     }
 
     this.velocity.x = this.mouse.isActive
-      ? randomBetween(-1, 1) + (-innerWidth / 2 + this.mouse.x) / 150
-      : randomBetween(-1, 1);
+      ? (-innerWidth / 2 + this.mouse.x) / 200
+      : 0;
 
     this.x += this.velocity.x;
     this.y += this.velocity.y;
-    this.draw();
+
+    this.draw(this.color);
   }
 }
 
@@ -97,9 +101,20 @@ export const initRain = (
     const y = randomBetween(0, innerHeight);
     const velocity = {
       x: 0,
-      y: randomBetween(11, 18),
+      y: randomBetween(1, 4),
     };
-    rains.push(new Rain(x, y, velocity, ctx, drops, mouse));
+
+    let color;
+    if (randomBetween(0, 20) === 1) {
+      color = '#cc2a1f';
+    } else if (randomBetween(0, 20) === 2) {
+      color = '#2a96d4';
+    } else if (randomBetween(0, 20) === 3) {
+      color = '#ccb81f';
+    } else {
+      color = '#8899a6';
+    }
+    rains.push(new Rain(x, y, velocity, ctx, drops, mouse, color));
   }
 };
 
