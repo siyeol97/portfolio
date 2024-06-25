@@ -1,0 +1,49 @@
+@import '../../styles/main.scss';
+
+.works_intro {
+  text-align: right;
+  padding-bottom: 50px;
+  & span {
+    font-family: 'Montserrat';
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  & p {
+    font-family: 'Montserrat';
+    font-size: 1.25rem;
+    &::after {
+      content: '';
+      display: block;
+      width: 5%;
+      border-bottom: 1px solid #f1f1f1;
+      margin-top: 10px;
+      margin-left: auto;
+    }
+  }
+}
+
+.card_container {
+  @include flex();
+  gap: 1rem;
+
+  & .card {
+    flex-grow: 1;
+    min-height: 484px;
+    border: 1px solid #f1f1f1;
+    border-radius: 1rem;
+    transition: all 0.5s;
+    &:hover {
+      flex: 16;
+    }
+  }
+
+  &:hover .card {
+    opacity: 0.1;
+  }
+
+  &:hover .card:hover {
+    opacity: 1;
+  }
+}
