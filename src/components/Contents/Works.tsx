@@ -2,7 +2,7 @@ import Detail from './Detail';
 import styles from './Works.module.scss';
 import githubImg from '../../public/Github-Dark.svg';
 import partyTimeJobLogo from '../../public/partyTimeJobLogo.png';
-import mogazoaImg from '../../public/mogazoaLogo.png';
+import mogazoaImg from '../../public/mogazoa.png';
 import SDlogo from '../../public/SDlogo.jpeg';
 
 export default function Works() {
