@@ -79,7 +79,6 @@ export const initRain = (
   total: number,
   rains: Rain[],
   drops: RainDrop[],
-  thunder: Thunder,
   canvas: HTMLCanvasElement,
   ctx: CanvasRenderingContext2D,
   mouse: {
@@ -94,7 +93,6 @@ export const initRain = (
   total = Math.floor((innerHeight * innerWidth) / 15000);
   rains.length = 0;
   drops.length = 0;
-  thunder = new Thunder(ctx);
 
   for (let i = 0; i < total; i++) {
     const x = randomBetween(0, innerWidth);

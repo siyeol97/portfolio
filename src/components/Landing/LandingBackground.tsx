@@ -22,11 +22,11 @@ export default function LandingBackground() {
     }
 
     const thunder = new Thunder(ctx);
-    initRain(total, rains, drops, thunder, canvas, ctx, mouse);
+    initRain(total, rains, drops, canvas, ctx, mouse);
     renderRain(rains, drops, thunder, canvas, ctx, THUNDER_PERCENTAGE);
 
     window.addEventListener('resize', () =>
-      initRain(total, rains, drops, thunder, canvas, ctx, mouse),
+      initRain(total, rains, drops, canvas, ctx, mouse),
     );
     canvas.addEventListener('mouseenter', () => (mouse.isActive = true));
     canvas.addEventListener('mouseleave', () => (mouse.isActive = false));
@@ -36,7 +36,7 @@ export default function LandingBackground() {
     });
 
     return window.removeEventListener('resize', () =>
-      initRain(total, rains, drops, thunder, canvas, ctx, mouse),
+      initRain(total, rains, drops, canvas, ctx, mouse),
     );
   }, []);
 
