@@ -42,47 +42,60 @@
     min-height: 484px;
     border: 1px solid #f1f1f1;
     border-radius: 1rem;
-    transition: all 0.5s;
+    transition: all 0.6s;
     cursor: pointer;
+    overflow: hidden;
+
+    & .background_image {
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      & img {
+        transition: all 0.5s;
+        opacity: 0.4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
     & .title {
       position: absolute;
       bottom: 0;
       padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: 800;
     }
-  }
 
-  &:hover .card {
-    flex-grow: 0.5;
-    opacity: 0.1;
-
-    & .arrow_back,
-    & .title {
-      opacity: 0;
-    }
-  }
-
-  &:hover .card:hover {
-    flex-grow: 2;
-    opacity: 1;
-
-    & .arrow_back,
-    & .title {
-      opacity: 1;
+    &:hover {
+      & img {
+        transition: all 0.5s;
+        opacity: 0.6;
+      }
     }
   }
 
   & .card.active {
-    opacity: 1;
+    & .background_image {
+      & img {
+        opacity: 1;
+      }
+    }
 
     & .arrow_back {
       display: block;
+      height: 120%;
     }
   }
 
   & .card.hidden {
     opacity: 0;
     flex-grow: 0;
+    pointer-events: none;
 
     & .title {
       opacity: 0;
