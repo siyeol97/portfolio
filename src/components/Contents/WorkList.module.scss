@@ -43,7 +43,6 @@
     position: relative;
     flex-grow: 1;
     min-height: 484px;
-    border: 1px solid #f1f1f1;
     border-radius: 0.75rem;
     transition: all 0.5s;
     cursor: pointer;
@@ -115,6 +114,7 @@
       cursor: pointer;
       display: block;
       opacity: 0.7;
+      transition: all 0.5s;
       &:hover {
         opacity: 1;
         scale: 120%;

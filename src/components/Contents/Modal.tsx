@@ -20,7 +20,25 @@ export default function Modal({ handleModalCloseClick, isActive }: Props) {
         className={styles.close}
         onClick={handleModalCloseClick}
       />
-      {cards[isActive].title} 모달
+      <section className={styles.container}>
+        <div className={styles.image_container}>
+          <div className={styles.image_box}>
+            <img
+              className={styles.image}
+              src={cards[isActive].image}
+              alt='image'
+            />
+          </div>
+        </div>
+        <div className={styles.description_container}>
+          {cards[isActive].title} {cards[isActive].description}
+          {cards[isActive].description}
+          {cards[isActive].description}
+          {cards[isActive].description}
+          {cards[isActive].description}
+          {cards[isActive].description}
+        </div>
+      </section>
     </div>
   );
 }
