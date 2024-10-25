@@ -44,7 +44,7 @@
     flex-grow: 1;
     min-height: 484px;
     border: 1px solid #f1f1f1;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     transition: all 0.5s;
     cursor: pointer;
     overflow: hidden;
@@ -63,6 +63,12 @@
         transform: translate(-50%, -50%);
         height: 100%;
         object-fit: cover;
+        filter: grayscale(1);
+        &:hover {
+          transition: all 0.3s;
+          opacity: 0.8;
+          filter: grayscale(0);
+        }
       }
     }
 
@@ -74,23 +80,26 @@
       font-weight: 800;
       font-family: 'Montserrat';
       transition: all 0.5s;
-    }
-
-    &:hover {
-      & img {
-        transition: all 0.5s;
-        opacity: 0.6;
-      }
+      white-space: nowrap;
     }
   }
 
   & .card.active {
+    cursor: default;
+    border: none;
     & .background_image {
       & img {
         opacity: 1;
+        filter: grayscale(0);
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+          scale: 101%;
+        }
       }
     }
     & .arrow_back {
+      cursor: pointer;
       display: block;
       opacity: 0.7;
       &:hover {
@@ -116,7 +125,7 @@
 
   & .card.active_modal {
     transition: all 0.2s;
-    opacity: 0;
+    visibility: hidden;
   }
 }
 

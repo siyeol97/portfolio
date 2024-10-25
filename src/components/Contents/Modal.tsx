@@ -1,5 +1,5 @@
 import styles from './Modal.module.scss';
-import close from '../../public/close.svg';
+import arrowDown from '../../public/arrow-down.svg';
 import cards from '../../data/cards';
 
 interface Props {
@@ -15,7 +15,7 @@ export default function Modal({ handleModalCloseClick, isActive }: Props) {
   return (
     <div className={styles.wrapper}>
       <img
-        src={close}
+        src={arrowDown}
         alt='close-button'
         className={styles.close}
         onClick={handleModalCloseClick}
