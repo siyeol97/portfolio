@@ -1,0 +1,23 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  @include flex();
+  position: absolute;
+  inset: 0;
+  border: 1px solid #f1f1f1;
+  border-radius: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 32px;
+  opacity: 0.7;
+  transition: all 0.5s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    scale: 120%;
+  }
+}

@@ -1,10 +1,8 @@
 @import '../../styles/main.scss';
 
-.font_english {
-  font-family: 'Montserrat';
-}
-
+// 페이지 제목
 .works_intro {
+  transition: all 0.2s;
   text-align: right;
   padding-bottom: 50px;
   & span {
@@ -28,6 +26,7 @@
   }
 }
 
+// 카드 컨테이너
 .card_container {
   @include flex();
   gap: 0.5rem;
@@ -46,7 +45,7 @@
     min-height: 484px;
     border: 1px solid #f1f1f1;
     border-radius: 1rem;
-    transition: all 0.6s;
+    transition: all 0.5s;
     cursor: pointer;
     overflow: hidden;
 
@@ -91,7 +90,6 @@
         opacity: 1;
       }
     }
-
     & .arrow_back {
       display: block;
       opacity: 0.7;
@@ -115,4 +113,14 @@
       opacity: 0;
     }
   }
+
+  & .card.active_modal {
+    transition: all 0.2s;
+    opacity: 0;
+  }
+}
+
+.active_modal {
+  transition: all 0.2s;
+  opacity: 0;
 }

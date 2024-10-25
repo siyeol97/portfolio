@@ -2,36 +2,12 @@ import { useState } from 'react';
 import Detail from './Detail';
 import styles from './WorkList.module.scss';
 import arrowBack from '../../public/arrow-back.svg';
-import blog_cover_image from '../../public/blog_cover.png';
-import diary_cover_image from '../../public/diary_cover.png';
-import mogazoa_cover_image from '../../public/mogazoa_cover.png';
-import ptj_cover_image from '../../public/ptj_cover.png';
-
-const cards = [
-  {
-    title: 'mogazoa',
-    description: 'Description 1',
-    image: mogazoa_cover_image,
-  },
-  {
-    title: 'party-time-job',
-    description: 'Description 2',
-    image: ptj_cover_image,
-  },
-  {
-    title: `Siyeol's Dev-log`,
-    description: 'Description 3',
-    image: blog_cover_image,
-  },
-  {
-    title: '등잔 밑 일기',
-    description: 'Description 4',
-    image: diary_cover_image,
-  },
-];
+import Modal from './Modal';
+import cards from '../../data/cards';
 
 export default function WorkList() {
   const [isActive, setIsActive] = useState<null | number>(null);
+  const [isModal, setIsModal] = useState(false);
 
   const handleCardClick = (index: number) => {
     if (isActive !== null) {
@@ -44,12 +20,25 @@ export default function WorkList() {
     setIsActive(null);
   };
 
+  const handleDetailClick = () => {
+    if (isActive === null) {
+      return;
+    }
+    setIsModal(true);
+  };
+
+  const handleModalCloseClick = () => {
+    setIsModal(false);
+  };
+
   return (
     <Detail
       backgroundColor='#121212'
       color='#f1f1f1'
     >
-      <section className={styles.works_intro}>
+      <section
+        className={`${styles.works_intro} ${isModal ? styles.active_modal : ''}`}
+      >
         <h1>
           <span>My</span>
           <br />
@@ -58,16 +47,23 @@ export default function WorkList() {
         <p>My journey</p>
       </section>
       <section className={styles.card_container}>
+        {isModal && (
+          <Modal
+            handleModalCloseClick={handleModalCloseClick}
+            isActive={isActive}
+          />
+        )}
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`${styles.card} ${isActive === index ? styles.active : isActive !== null ? styles.hidden : ''}`}
+            className={`${styles.card} ${isActive === index ? styles.active : isActive !== null ? styles.hidden : ''} ${isModal ? styles.active_modal : ''}`}
             onClick={() => handleCardClick(index)}
           >
             <div className={styles.background_image}>
               <img
                 src={card.image}
                 alt='background_image'
+                onClick={handleDetailClick}
               />
             </div>
             <img
