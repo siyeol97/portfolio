@@ -72,7 +72,14 @@ export default function WorkList() {
               className={styles.arrow_back}
               onClick={handleArrowBackClick}
             />
-            <p className={styles.title}>{card.title}</p>
+            <div className={styles.info}>
+              <p className={styles.title}>{card.title}</p>
+              <p
+                className={`${isActive === index ? styles.description_active : styles.description_hidden}`}
+              >
+                {card.description}
+              </p>
+            </div>
           </div>
         ))}
       </section>
