@@ -33,8 +33,15 @@ const cards = [
 export default function WorkList() {
   const [isActive, setIsActive] = useState<null | number>(null);
 
-  const handleClick = (index: number) => {
-    setIsActive(isActive === index ? null : index);
+  const handleCardClick = (index: number) => {
+    if (isActive !== null) {
+      return;
+    }
+    setIsActive(index);
+  };
+
+  const handleArrowBackClick = () => {
+    setIsActive(null);
   };
 
   return (
@@ -55,7 +62,7 @@ export default function WorkList() {
           <div
             key={index}
             className={`${styles.card} ${isActive === index ? styles.active : isActive !== null ? styles.hidden : ''}`}
-            onClick={() => handleClick(index)}
+            onClick={() => handleCardClick(index)}
           >
             <div className={styles.background_image}>
               <img
@@ -67,6 +74,7 @@ export default function WorkList() {
               src={arrowBack}
               alt='arrow-back'
               className={styles.arrow_back}
+              onClick={handleArrowBackClick}
             />
             <p className={styles.title}>{card.title}</p>
           </div>

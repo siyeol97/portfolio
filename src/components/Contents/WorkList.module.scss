@@ -1,5 +1,9 @@
 @import '../../styles/main.scss';
 
+.font_english {
+  font-family: 'Montserrat';
+}
+
 .works_intro {
   text-align: right;
   padding-bottom: 50px;
@@ -69,6 +73,8 @@
       padding: 1rem;
       font-size: 1.5rem;
       font-weight: 800;
+      font-family: 'Montserrat';
+      transition: all 0.5s;
     }
 
     &:hover {
@@ -88,7 +94,15 @@
 
     & .arrow_back {
       display: block;
-      height: 120%;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+        scale: 120%;
+      }
+    }
+    & .title {
+      font-size: 2rem;
+      transition: all 0.5s;
     }
   }
 
