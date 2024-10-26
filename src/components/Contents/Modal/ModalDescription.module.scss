@@ -1,0 +1,10 @@
+@import '../../../styles/main.scss';
+
+.wrapper {
+  @include flex($justify: start);
+  flex-direction: column;
+  width: 30%;
+  min-width: 500px;
+  height: 100%;
+  gap: 2rem;
+}

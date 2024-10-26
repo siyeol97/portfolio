@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Detail from './Detail';
 import styles from './WorkList.module.scss';
 import arrowBack from '../../public/arrow-back.svg';
-import Modal from './Modal';
 import cards from '../../data/cards';
+import Modal from './Modal/Modal';
 
 export default function WorkList() {
   const [isActive, setIsActive] = useState<null | number>(null);
