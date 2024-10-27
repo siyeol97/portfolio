@@ -1,15 +1,20 @@
-import styles from './Modal.module.scss';
+import { Card } from '../../../data/cards';
 import arrowDown from '../../../public/arrow-down.svg';
+import styles from './Modal.module.scss';
 import ModalDescription from './ModalDescription';
 import ModalImage from './ModalImage';
-import cards from '../../../data/cards';
 
 interface Props {
   handleModalCloseClick: () => void;
   isActive: number | null;
+  card: Card;
 }
 
-export default function Modal({ handleModalCloseClick, isActive }: Props) {
+export default function Modal({
+  handleModalCloseClick,
+  isActive,
+  card,
+}: Props) {
   if (isActive === null) {
     return;
   }
@@ -23,8 +28,8 @@ export default function Modal({ handleModalCloseClick, isActive }: Props) {
         onClick={handleModalCloseClick}
       />
       <section className={styles.container}>
-        <ModalImage image={cards[isActive].image} />
-        <ModalDescription />
+        <ModalImage image={card.image} />
+        <ModalDescription card={card} />
       </section>
     </div>
   );

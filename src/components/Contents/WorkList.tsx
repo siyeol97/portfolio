@@ -47,10 +47,11 @@ export default function WorkList() {
         <p>My journey</p>
       </section>
       <section className={styles.card_container}>
-        {isModal && (
+        {isModal && isActive !== null && (
           <Modal
             handleModalCloseClick={handleModalCloseClick}
             isActive={isActive}
+            card={cards[isActive]}
           />
         )}
         {cards.map((card, index) => (
@@ -73,11 +74,11 @@ export default function WorkList() {
               onClick={handleArrowBackClick}
             />
             <div className={styles.info}>
-              <p className={styles.title}>{card.title}</p>
+              <p className={styles.title}>{card.info.title}</p>
               <p
                 className={`${isActive === index ? styles.description_active : styles.description_hidden}`}
               >
-                {card.description}
+                {card.info.description}
               </p>
             </div>
           </div>
