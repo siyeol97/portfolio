@@ -28,7 +28,10 @@ export default function ModalDescription({ card }: Props) {
 
   return (
     <section className={styles.wrapper}>
-      <ModalDescriptionHeader handleHeadClick={handleHeadClick} />
+      <ModalDescriptionHeader
+        handleHeadClick={handleHeadClick}
+        head={head}
+      />
       <ModalDescriptionBody>{getBody()}</ModalDescriptionBody>
     </section>
   );
