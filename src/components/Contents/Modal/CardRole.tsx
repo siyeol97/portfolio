@@ -1,4 +1,5 @@
 import { Card } from '../../../data/cards';
+import styles from './CardRole.module.scss';
 
 interface Props {
   card: Card;
@@ -6,10 +7,17 @@ interface Props {
 
 export default function CardRole({ card }: Props) {
   return (
-    <div>
-      <ul>
+    <div className={styles.wrapper}>
+      <ul className={styles.role_list}>
         {card.role.map((item) => {
-          return <li key={item}>{item}</li>;
+          return (
+            <li
+              key={item}
+              className={styles.role}
+            >
+              {item}
+            </li>
+          );
         })}
       </ul>
     </div>

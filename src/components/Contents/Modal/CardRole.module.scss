@@ -1,0 +1,15 @@
+@import '../../../styles/main.scss';
+
+.wrapper {
+  @include flex($align: start);
+  flex-direction: column;
+}
+
+.role_list {
+  list-style-type: disc;
+}
+
+.role {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}

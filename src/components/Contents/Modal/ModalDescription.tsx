@@ -5,7 +5,6 @@ import ModalDescriptionBody from './ModalDescriptionBody';
 import ModalDescriptionHeader from './ModalDescriptionHeader';
 import CardInfo from './CardInfo';
 import CardRole from './CardRole';
-import CardImpression from './CardImpression';
 
 interface Props {
   card: Card;
@@ -24,9 +23,6 @@ export default function ModalDescription({ card }: Props) {
     }
     if (head === 'role') {
       return <CardRole card={card} />;
-    }
-    if (head === 'impression') {
-      return <CardImpression card={card} />;
     }
   };
 

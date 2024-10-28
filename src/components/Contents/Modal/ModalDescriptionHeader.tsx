@@ -21,13 +21,6 @@ export default function ModalDescriptionHeader({ handleHeadClick }: Props) {
       >
         My role
       </div>
-      <div
-        className={styles.header}
-        id='impression'
-        onClick={handleHeadClick}
-      >
-        Impression
-      </div>
     </div>
   );
 }
