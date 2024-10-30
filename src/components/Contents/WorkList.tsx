@@ -29,6 +29,7 @@ export default function WorkList() {
 
   const handleModalCloseClick = () => {
     setIsModal(false);
+    setIsActive(null);
   };
 
   return (
@@ -44,7 +45,7 @@ export default function WorkList() {
           <br />
           <span>Works</span>
         </h1>
-        <p>My journey</p>
+        <p>Journey</p>
       </section>
       <section className={styles.card_container}>
         {isModal && isActive !== null && (

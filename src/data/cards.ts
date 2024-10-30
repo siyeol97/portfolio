@@ -12,6 +12,9 @@ export interface Card {
   image: string;
   skills: string[];
   role: string[];
+  introduce: string[];
+  url: string;
+  repository: string;
 }
 
 const cards: Card[] = [
@@ -40,6 +43,15 @@ const cards: Card[] = [
       '유저 프로필 수정 기능 : React-hook-form을 활용하여 유저 프로필 정보 수정 및 상품 추가/수정 기능 구현',
       '인증 및 공유 기능 : 카카오 간편 로그인/회원가입 및 콘텐츠 공유 기능 구현',
     ],
+    introduce: [
+      '상품을 카테고리 별로 둘러볼 수 있습니다.',
+      '다양한 종류의 상품을 직접 등록하고, 리뷰와 별점을 남길 수 있습니다.',
+      '리뷰어의 랭킹을 확인할 수 있습니다.',
+      '리뷰어의 프로필 페이지에서 다양한 정보를 확인할 수 있습니다.',
+      '비교하기 페이지에서 두 가지의 상품을 찜, 리뷰수, 별점 기준으로 비교할 수 있습니다.',
+    ],
+    url: 'https://mogazoa4-1.vercel.app/',
+    repository: 'https://github.com/Codeit-FE3-Part4-team1-Final/Mogazoa',
   },
   {
     info: {
@@ -56,6 +68,15 @@ const cards: Card[] = [
       'localStorage를 이용한 최근 본 공고 기능 구현',
       '공고 신청/취소 기능 구현',
     ],
+    introduce: [
+      '사장님과 알바 유형으로 회원 가입이 가능합니다.',
+      '알바 유형은 공고에 지원할 수 있고 지원 결과를 알람으로 확인할 수 있습니다.',
+      '사장님 유형은 가게와 공고를 등록할 수 있고, 알바의 지원을 승인/거절할 수 있습니다.',
+      '전체 공고와 지난/마감 공고를 확인할 수 있습니다.',
+      '공고를 검색할 수 있고, 위치, 시작일, 시급 기준으로 필터링 할 수 있습니다.',
+    ],
+    url: 'https://party-time-job-deploy.vercel.app/',
+    repository: 'https://github.com/Party-Time-Job/Party-Time-Job',
   },
   {
     info: {
@@ -79,6 +100,14 @@ const cards: Card[] = [
       'React-markdown, React-syntax-highlighter를 이용한 글 본문, 작성 중 미리보기 기능 구현',
       'React-query의 optimistic update를 이용한 글 좋아요 버튼 구현',
     ],
+    introduce: [
+      'Github, Google 계정으로 로그인할 수 있습니다.',
+      '댓글을 남길 수 있고, 포스트 좋아요 버튼을 누를 수 있습니다.',
+      '포스트를 검색할 수 있습니다.',
+      'markdown 형식으로 글을 작성할 수 있습니다.',
+    ],
+    url: 'https://siyeol-blog.vercel.app/',
+    repository: 'https://github.com/siyeol97/siyeol-blog',
   },
   {
     info: {
@@ -104,6 +133,15 @@ const cards: Card[] = [
       '감정 통계 및 시각화 : React-native-chart-kit 라이브러를 활용한 감정 종류 통계 및 우울감 수치 그래프 시각화',
       '음악 및 할 일 추천 기능 : 음악 플랫폼 "멜론"의 해시태그를 기준으로 웹 크롤링을 통해 구축된 음악 플레이리스트 데이터를 사용, 사용자의 감정에 따른 음악 및 할 일 추천 기능 구현',
     ],
+    introduce: [
+      '음성으로 일기를 녹음할 수 있습니다.',
+      '음성과 자동으로 변환된 텍스트를 AI 모델로 분석해 유저의 감정을 예측합니다.',
+      '유저의 감정에 따라 위로 챗봇이 적절한 문구를 출력합니다.',
+      '일간, 주간별 감정과 우울감 양상 통계를 제공합니다.',
+      '유저의 감정에 따른 음악을 추천하고 자가관리법을 제공합니다.',
+    ],
+    url: '',
+    repository: 'https://github.com/siyeol97/Diary',
   },
 ];
 
