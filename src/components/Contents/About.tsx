@@ -20,9 +20,12 @@ export default function About() {
           <br />
           <span>Me</span>
         </h1>
-        <p>It's about me and my skills</p>
+        <p>It's about me and skills</p>
       </section>
       <section className={styles.overview}>
+        <div>
+          <span>Overview</span>
+        </div>
         <article className={styles.overview_text}>
           상상한 무궁무진한 아이디어를 제가 배운 기술로 구현해가는 과정이
           재밌습니다. 항상 새로운 시도를 두려워하지 않는 프론트엔드 개발자가
@@ -32,9 +35,6 @@ export default function About() {
           성실하게 쌓은 지식으로, 회사에 실질적인 도움이 되는 프론트엔드
           개발자로 일하고 싶습니다.
         </article>
-        <div>
-          <span>Overview</span>
-        </div>
       </section>
       <section className={styles.skills}>
         <div>
