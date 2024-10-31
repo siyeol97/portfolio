@@ -1,8 +1,5 @@
 @import '../../../styles/main.scss';
 
-.hidden {
-}
-
 .wrapper {
   @include flex($align: start);
   flex-direction: column;
@@ -36,8 +33,8 @@
   font-size: 2.875rem;
   font-weight: 700;
   line-height: 0.9;
-  margin-top: 0.5rem;
-  margin-bottom: 0.875rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1rem;
 }
 
 .github_link {
@@ -59,7 +56,7 @@
   font-family: 'Montserrat';
   font-size: 1.375rem;
   font-weight: 600;
-  margin-top: 1.625rem;
+  margin-top: 1.875rem;
   &::after {
     content: '';
     display: block;
