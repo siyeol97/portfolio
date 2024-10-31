@@ -1,11 +1,11 @@
 import styles from './About.module.scss';
-import jsImage from '../../public/JavaScript.svg';
-import tsImage from '../../public/TypeScript.svg';
-import reactImage from '../../public/React-Dark.svg';
-import nextImage from '../../public/NextJS-Dark.svg';
-import pythonImage from '../../public/Python-Dark.svg';
-import gitImage from '../../public/Git.svg';
-import sassImage from '../../public/Sass.svg';
+import jsImage from '../../public/asset/JavaScript.svg';
+import tsImage from '../../public/asset/TypeScript.svg';
+import reactImage from '../../public/asset/React-Dark.svg';
+import nextImage from '../../public/asset/NextJS-Dark.svg';
+import pythonImage from '../../public/asset/Python-Dark.svg';
+import gitImage from '../../public/asset/Git.svg';
+import sassImage from '../../public/asset/Sass.svg';
 import Detail from './Detail';
 
 export default function About() {

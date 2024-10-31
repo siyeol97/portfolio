@@ -1,7 +1,7 @@
 import { Card } from '../../../data/cards';
 import styles from './CardInfo.module.scss';
-import openImg from '../../../public/open.svg';
-import githubImg from '../../../public/Github-Light.svg';
+import openImg from '../../../public/asset/open.svg';
+import githubImg from '../../../public/asset/Github-Light.svg';
 
 interface Props {
   card: Card;

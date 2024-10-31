@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Detail from './Detail';
 import styles from './WorkList.module.scss';
-import arrowBack from '../../public/arrow-back.svg';
+import arrowBack from '../../public/asset/arrow-back.svg';
 import cards from '../../data/cards';
 import Modal from './Modal/Modal';
 

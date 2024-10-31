@@ -1,7 +1,7 @@
-import blog_cover_image from '../public/blog_cover.png';
-import diary_cover_image from '../public/diary_cover.png';
-import mogazoa_cover_image from '../public/mogazoa_cover.png';
-import ptj_cover_image from '../public/ptj_cover.png';
+import blog_cover_image from '../public/blog/blog_cover.png';
+import diary_cover_image from '../public/diary/diary_cover.png';
+import mogazoa_cover_image from '../public/mogazoa/mogazoa_cover.png';
+import ptj_cover_image from '../public/party-time-job/ptj_cover.png';
 
 export interface Card {
   info: {

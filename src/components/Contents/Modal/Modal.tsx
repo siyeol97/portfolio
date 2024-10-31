@@ -1,5 +1,5 @@
 import { Card } from '../../../data/cards';
-import arrowDown from '../../../public/arrow-down.svg';
+import arrowDown from '../../../public/asset/arrow-down.svg';
 import styles from './Modal.module.scss';
 import ModalDescription from './ModalDescription';
 import ModalImage from './ModalImage';
