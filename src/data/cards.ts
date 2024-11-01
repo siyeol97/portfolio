@@ -1,7 +1,33 @@
-import blog_cover_image from '../public/blog/blog_cover.png';
-import diary_cover_image from '../public/diary/diary_cover.png';
-import mogazoa_cover_image from '../public/mogazoa/mogazoa_cover.png';
-import ptj_cover_image from '../public/party-time-job/ptj_cover.png';
+import cover from '../public/mogazoa/cover.png';
+import add_product from '../public/mogazoa/add_product.png';
+import compare from '../public/mogazoa/compare.png';
+import edit_product from '../public/mogazoa/edit_product.png';
+import edit_profile from '../public/mogazoa/edit_profile.png';
+import follow from '../public/mogazoa/follow.png';
+import product from '../public/mogazoa/product.png';
+import profile from '../public/mogazoa/profile.png';
+import reply from '../public/mogazoa/reply.png';
+
+import blog_cover from '../public/blog/blog_cover.png';
+import blog_login from '../public/blog/blog_login.png';
+import blog_main from '../public/blog/blog_main.png';
+import blog_reply from '../public/blog/blog_reply.png';
+import blog_search from '../public/blog/blog_search.png';
+import blog_write from '../public/blog/blog_write.png';
+
+import diary_cover from '../public/diary/diary_cover.png';
+import diary_write from '../public/diary/diary_exam1.png';
+import diary_statistics from '../public/diary/diary_exam2.png';
+import diary_poster from '../public/diary/diary_poster.png';
+import diary_process from '../public/diary/diary_process.png';
+
+import ptj_cover from '../public/party-time-job/ptj_cover.png';
+import apply_table from '../public/party-time-job/apply_table.png';
+import ptj_edit_profile from '../public/party-time-job/ptj_edit_profile.png';
+import noti_list from '../public/party-time-job/noti_list.png';
+import notification from '../public/party-time-job/notification.png';
+import outdated_noti from '../public/party-time-job/outdated_noti.png';
+import seen_noti from '../public/party-time-job/seen_noti.png';
 
 export interface Card {
   info: {
@@ -9,7 +35,7 @@ export interface Card {
     description: string;
     period: string;
   };
-  image: string;
+  images: string[];
   skills: string[];
   role: string[];
   introduce: string[];
@@ -25,7 +51,17 @@ const cards: Card[] = [
         '음악, 식당, 영화, 전자기기, 호텔, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼',
       period: '2024.04.11 ~ 2024.05.17',
     },
-    image: mogazoa_cover_image,
+    images: [
+      cover,
+      add_product,
+      compare,
+      edit_product,
+      edit_profile,
+      follow,
+      product,
+      profile,
+      reply,
+    ],
     skills: [
       'Next.js',
       'TypeScript',
@@ -59,7 +95,15 @@ const cards: Card[] = [
       description: '일자리가 급한 사람들을 위한 구인, 구직 플랫폼',
       period: '2024.03.07 ~ 2024.03.25',
     },
-    image: ptj_cover_image,
+    images: [
+      ptj_cover,
+      apply_table,
+      ptj_edit_profile,
+      noti_list,
+      notification,
+      outdated_noti,
+      seen_noti,
+    ],
     skills: ['Next.js', 'TypeScript', 'Tailwind', 'Husky', 'EsLint/Prettier'],
     role: [
       '재사용 가능한 공통 컴포넌트 : 공고 카드, 공고 리스트, 공고 상세정보 컴포넌트 설계 및 구현',
@@ -84,7 +128,14 @@ const cards: Card[] = [
       description: '개인 블로그',
       period: '2024.02.11 ~ in progress',
     },
-    image: blog_cover_image,
+    images: [
+      blog_cover,
+      blog_login,
+      blog_main,
+      blog_reply,
+      blog_search,
+      blog_write,
+    ],
     skills: [
       'Next.js',
       'TypeScript',
@@ -116,7 +167,13 @@ const cards: Card[] = [
         '사용자가 입력한 음성과 텍스트를 이용한 감정, 우울감 분석 일기 어플리케이션',
       period: '2023.04.27 ~ 2023.06.22',
     },
-    image: diary_cover_image,
+    images: [
+      diary_cover,
+      diary_write,
+      diary_statistics,
+      diary_poster,
+      diary_process,
+    ],
     skills: [
       'React-Native, Expo',
       'JavaScript',

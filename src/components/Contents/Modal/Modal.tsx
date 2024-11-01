@@ -28,7 +28,7 @@ export default function Modal({
         onClick={handleModalCloseClick}
       />
       <section className={styles.container}>
-        <ModalImage image={card.image} />
+        <ModalImage images={card.images} />
         <ModalDescription card={card} />
       </section>
     </div>

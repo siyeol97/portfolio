@@ -63,7 +63,7 @@ export default function WorkList() {
           >
             <div className={styles.background_image}>
               <img
-                src={card.image}
+                src={card.images[0]}
                 alt='background_image'
                 onClick={handleDetailClick}
               />
