@@ -23,7 +23,7 @@ export default function Modal({
     <div className={styles.wrapper}>
       <img
         src={arrowDown}
-        alt='close-button'
+        alt='down-button'
         className={styles.close}
         onClick={handleModalCloseClick}
       />
