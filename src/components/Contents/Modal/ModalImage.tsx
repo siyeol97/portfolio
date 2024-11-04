@@ -21,7 +21,10 @@ export default function ModalImage({ images }: Props) {
   };
   return (
     <section className={styles.wrapper}>
-      <Slider {...settings}>
+      <Slider
+        {...settings}
+        dotsClass='dot-style'
+      >
         {images.map((image) => (
           <div
             className={styles.image_box}
@@ -39,6 +42,7 @@ export default function ModalImage({ images }: Props) {
   );
 }
 
+// slick-arrow
 interface ArrowProps {
   className?: string;
   style?: React.CSSProperties;
@@ -51,7 +55,7 @@ function NextArrow({ className, style, onClick }: ArrowProps) {
       src={arrowNext}
       alt='arrow-next'
       onClick={onClick}
-      style={{ width: '40px', height: '40px', zIndex: 1, ...style }}
+      style={{ ...arrowStyle, ...nextArrowStyle, ...style }}
       className={`${styles.arrow} ${className}`}
     />
   );
@@ -63,11 +67,19 @@ function PrevArrow({ className, style, onClick }: ArrowProps) {
       src={arrowPrev}
       alt='arrow-prev'
       onClick={onClick}
-      style={{ ...arrowStyle, ...style }}
+      style={{ ...arrowStyle, ...prevArrowStyle, ...style }}
       className={`${styles.arrow} ${className}`}
     />
   );
 }
+
+const prevArrowStyle = {
+  left: '-30px',
+};
+
+const nextArrowStyle = {
+  right: '-30px',
+};
 
 const arrowStyle = {
   width: '40px',

@@ -17,6 +17,12 @@
   position: relative;
   @include flex();
   width: 100%;
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .image {

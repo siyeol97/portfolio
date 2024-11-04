@@ -1,3 +1,4 @@
+// mogazoa
 import cover from '../public/mogazoa/cover.png';
 import add_product from '../public/mogazoa/add_product.png';
 import compare from '../public/mogazoa/compare.png';
@@ -8,6 +9,7 @@ import product from '../public/mogazoa/product.png';
 import profile from '../public/mogazoa/profile.png';
 import reply from '../public/mogazoa/reply.png';
 
+// blog
 import blog_cover from '../public/blog/blog_cover.png';
 import blog_login from '../public/blog/blog_login.png';
 import blog_main from '../public/blog/blog_main.png';
@@ -15,12 +17,14 @@ import blog_reply from '../public/blog/blog_reply.png';
 import blog_search from '../public/blog/blog_search.png';
 import blog_write from '../public/blog/blog_write.png';
 
+// diary
 import diary_cover from '../public/diary/diary_cover.png';
 import diary_write from '../public/diary/diary_exam1.png';
 import diary_statistics from '../public/diary/diary_exam2.png';
 import diary_poster from '../public/diary/diary_poster.png';
 import diary_process from '../public/diary/diary_process.png';
 
+// party-time-job
 import ptj_cover from '../public/party-time-job/ptj_cover.png';
 import apply_table from '../public/party-time-job/apply_table.png';
 import ptj_edit_profile from '../public/party-time-job/ptj_edit_profile.png';
@@ -71,12 +75,12 @@ const cards: Card[] = [
       'EsLint/Prettier',
     ],
     role: [
-      '유저 프로필 페이지 담당',
+      '유저 프로필 페이지 담당, pc, tablet, mobile 반응형 디자인',
       'Zustand를 이용한 모달창의 전역 상태 관리',
       '재사용 가능항 공통 컴포넌트 : Button, Modal, ProductCard 컴포넌트 설계 및 구현',
       'SSR 적용 : 유저 프로필 페이지에 서버 사이드 렌더링 적용으로 초기 로딩 속도 개선',
       'React-Query의 useMutation과 useInfiniteQuery를 사용하여 팔로우/팔로우 취소, 팔로워 목록, 상품목록 무한 스크롤 기능 구현',
-      '유저 프로필 수정 기능 : React-hook-form을 활용하여 유저 프로필 정보 수정 및 상품 추가/수정 기능 구현',
+      '상품 추가/수정, 유저 프로필 수정 기능 : React-hook-form을 활용하여 유저 프로필 정보 수정 및 상품 추가/수정 기능 구현',
       '인증 및 공유 기능 : 카카오 간편 로그인/회원가입 및 콘텐츠 공유 기능 구현',
     ],
     introduce: [
@@ -107,6 +111,7 @@ const cards: Card[] = [
     skills: ['Next.js', 'TypeScript', 'Tailwind', 'Husky', 'EsLint/Prettier'],
     role: [
       '재사용 가능한 공통 컴포넌트 : 공고 카드, 공고 리스트, 공고 상세정보 컴포넌트 설계 및 구현',
+      'pc, tablet, mobile 반응형 디자인',
       '공고 목록 화면 페이지네이션 기능 구현',
       '공고 검색, 공고 정렬, 필터링 기능 구현',
       'localStorage를 이용한 최근 본 공고 기능 구현',
