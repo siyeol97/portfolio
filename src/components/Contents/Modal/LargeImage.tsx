@@ -24,6 +24,7 @@ export default function LargeImage({ toggleLargeImage, image }: Props) {
           src={image}
           alt='image'
           className={styles.image}
+          onClick={() => toggleLargeImage(null)}
         />
       </div>
     </div>
