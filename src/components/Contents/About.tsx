@@ -148,6 +148,11 @@ export default function About() {
                 <img
                   src={skill.icon}
                   alt={skill.name}
+                  className={styles.blur_img}
+                />
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
                 />
                 <div className={styles.skill_name}>{skill.name}</div>
               </li>

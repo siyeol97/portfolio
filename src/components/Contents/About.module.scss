@@ -96,7 +96,7 @@
         font-size: 0.75rem;
         position: absolute;
         top: -24px;
-        right: -44px;
+        right: -48px;
         background-color: #272525;
         padding: 0.125rem 0.125rem 0.125rem 0.375rem;
         border-radius: 6px;
@@ -132,7 +132,7 @@
 .skills {
   @include flex($align: flex-start, $justify: flex-start);
   gap: 120px;
-  padding: 100px 0 0;
+  padding: 50px 0 0;
   & span {
     font-size: 1rem;
     font-family: 'Montserrat';
@@ -159,10 +159,23 @@
       display: inline;
 
       & img {
+        position: relative;
         width: 104px;
       }
 
+      & .blur_img {
+        transition: all 0.2s;
+        position: absolute;
+        top: -0px;
+        left: 0px;
+        width: 104px;
+        filter: blur(2.5rem);
+        opacity: 0;
+        z-index: 0;
+      }
+
       & .skill_name {
+        color: #ffffff;
         transition: all 0.2s;
         position: absolute;
         width: 100%;
@@ -173,7 +186,8 @@
         opacity: 0;
       }
 
-      &:hover .skill_name {
+      &:hover .skill_name,
+      &:hover .blur_img {
         transition: all 0.2s;
         opacity: 1;
       }
