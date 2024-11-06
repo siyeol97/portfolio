@@ -28,7 +28,7 @@
 }
 
 .overview {
-  @include flex($align: flex-start);
+  @include flex($align: flex-start, $justify: start);
   gap: 100px;
   padding: 100px 0 0;
   word-break: keep-all;
@@ -37,7 +37,6 @@
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.7;
-    width: 100%;
   }
 
   & span {
@@ -55,17 +54,16 @@
 }
 
 .contact {
-  @include flex($align: flex-start);
-  word-break: keep-all;
+  @include flex($align: flex-start, $justify: start);
   gap: 100px;
   padding: 50px 0 0;
   word-break: keep-all;
+  width: 100%;
 
   & .contact_container {
     @include flex($justify: start, $align: start);
     flex-wrap: wrap;
     gap: 3rem;
-    width: 100%;
 
     & img {
       width: 24px;
@@ -131,7 +129,7 @@
 
 .skills {
   @include flex($align: flex-start, $justify: flex-start);
-  gap: 120px;
+  gap: 100px;
   padding: 50px 0 0;
   & span {
     font-size: 1rem;
@@ -193,4 +191,9 @@
       }
     }
   }
+}
+
+.sub_header {
+  width: 130px;
+  display: block;
 }

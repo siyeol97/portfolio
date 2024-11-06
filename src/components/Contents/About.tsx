@@ -43,7 +43,7 @@ export default function About() {
         </h3>
       </section>
       <section className={styles.overview}>
-        <div>
+        <div className={styles.sub_header}>
           <span>Overview</span>
         </div>
         <article className={styles.overview_text}>
@@ -56,7 +56,7 @@ export default function About() {
         </article>
       </section>
       <section className={styles.contact}>
-        <div>
+        <div className={styles.sub_header}>
           <span className={styles.contact_subHead}>Contact</span>
         </div>
         <article className={styles.contact_container}>
@@ -136,7 +136,7 @@ export default function About() {
         </article>
       </section>
       <section className={styles.skills}>
-        <div>
+        <div className={styles.sub_header}>
           <span>Skills &</span>
           <br />
           <span>Tools</span>
