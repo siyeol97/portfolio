@@ -1,6 +1,5 @@
 import styles from './Contents.module.scss';
 import About from './About';
-import Finish from './Finish';
 import WorkList from './WorkList';
 
 export default function Contents() {
@@ -8,7 +7,6 @@ export default function Contents() {
     <main className={styles.wrapper}>
       <About />
       <WorkList />
-      <Finish />
     </main>
   );
 }
