@@ -25,6 +25,18 @@
     font-weight: 600;
     color: #ffffff;
   }
+
+  @include tablet {
+    & h1 {
+      font-size: 4.375rem;
+    }
+    & h2 {
+      font-size: 3.125rem;
+    }
+    & h3 {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .overview {
@@ -49,6 +61,16 @@
       width: 30px;
       border-bottom: 1px solid #f1f1f1;
       margin-top: 5px;
+    }
+  }
+
+  @include tablet {
+    padding: 70px 0 0;
+    flex-direction: column;
+    gap: 20px;
+
+    & .overview_text {
+      font-size: 1rem;
     }
   }
 }
@@ -125,6 +147,29 @@
       margin-top: 5px;
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+    gap: 20px;
+
+    & .contact_container {
+      & img {
+        width: 20px;
+      }
+
+      & .contact_box {
+        & .sub_icon {
+          width: 18px;
+          top: 1px;
+          right: -24px;
+        }
+
+        & .contact_text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 
 .skills {
@@ -191,9 +236,37 @@
       }
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+    gap: 20px;
+
+    & .skills_img {
+      width: 100%;
+
+      & li {
+        position: relative;
+        display: inline;
+
+        & img {
+          position: relative;
+          width: 96px;
+        }
+
+        & .blur_img {
+          width: 96px;
+          filter: blur(2rem);
+        }
+      }
+    }
+  }
 }
 
 .sub_header {
   width: 130px;
   display: block;
+
+  @include tablet {
+    width: 80px;
+  }
 }

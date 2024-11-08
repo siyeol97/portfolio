@@ -3,9 +3,13 @@
 .wrapper {
   @include flex($align: flex-start);
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   padding: 80px 100px;
   position: relative;
+
+  @include tablet {
+    padding: 70px;
+  }
 }
 
 .container {
