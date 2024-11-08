@@ -4,11 +4,11 @@
 .works_intro {
   transition: all 0.2s;
   padding-bottom: 100px;
-  & span {
+  & h1 {
     font-family: 'Montserrat';
     font-size: 6rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.3;
   }
 
   & p {
@@ -22,6 +22,13 @@
       border-bottom: 1px solid #f1f1f1;
       margin-top: 10px;
       margin-right: auto;
+    }
+  }
+
+  @include tablet {
+    & h1 {
+      font-size: 4.5rem;
+      line-height: 1.2;
     }
   }
 }
@@ -42,7 +49,7 @@
   & .card {
     position: relative;
     flex-grow: 1;
-    min-height: 484px;
+    height: 500px;
     border-radius: 0.75rem;
     transition: all 0.5s;
     cursor: pointer;
@@ -77,6 +84,7 @@
       padding: 1rem;
       white-space: nowrap;
       transition: all 0.5s;
+      color: #ffffff;
     }
 
     & .title {
@@ -147,6 +155,37 @@
   & .card.active_modal {
     transition: all 0.2s;
     visibility: hidden;
+  }
+
+  @include tablet {
+    display: grid;
+    width: 100%;
+    height: calc(500px + 1rem);
+    grid-template-columns: 1fr 1fr;
+
+    & .card {
+      & .title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      width: calc((100vw - 140px - 0.5rem) / 2);
+      height: 250px;
+      overflow: hidden;
+    }
+
+    & .card.active {
+      width: calc((100vw - 140px - 0.5rem));
+      height: 500px;
+    }
+
+    & .card.hidden {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
   }
 }
 

@@ -137,9 +137,7 @@ export default function About() {
       </section>
       <section className={styles.skills}>
         <div className={styles.sub_header}>
-          <span>Skills &</span>
-          <br />
-          <span>Tools</span>
+          <span>Skills & Tools</span>
         </div>
         <div className={styles.skills_img}>
           <ul>

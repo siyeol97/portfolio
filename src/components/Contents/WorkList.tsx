@@ -40,10 +40,8 @@ export default function WorkList() {
       <section
         className={`${styles.works_intro} ${isModal ? styles.active_modal : ''}`}
       >
-        <h1>
-          <span>Works</span>
-        </h1>
-        <p>Journey</p>
+        <h1>Works</h1>
+        <p>My journey</p>
       </section>
       <section className={styles.card_container}>
         {isModal && isActive !== null && (
