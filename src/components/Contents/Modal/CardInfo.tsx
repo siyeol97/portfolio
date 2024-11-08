@@ -63,7 +63,7 @@ export default function CardInfo({ card }: Props) {
         })}
       </ul>
       <p className={styles.sub_head}>Used Skills</p>
-      <ul className={styles.item_list}>
+      <ul className={`${styles.item_list} ${styles.item_skill_list}`}>
         {card.skills.map((skill) => {
           return (
             <li

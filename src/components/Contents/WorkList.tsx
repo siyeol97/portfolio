@@ -41,8 +41,6 @@ export default function WorkList() {
         className={`${styles.works_intro} ${isModal ? styles.active_modal : ''}`}
       >
         <h1>
-          <span>My</span>
-          <br />
           <span>Works</span>
         </h1>
         <p>Journey</p>

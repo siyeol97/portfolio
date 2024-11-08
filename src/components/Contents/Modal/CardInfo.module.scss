@@ -72,6 +72,11 @@
   padding: 0.5rem 1.125rem 0;
 }
 
+.item_skill_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .skill {
   font-family: 'Montserrat';
   font-weight: 300;
