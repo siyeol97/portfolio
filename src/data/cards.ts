@@ -58,13 +58,13 @@ const cards: Card[] = [
     images: [
       cover,
       add_product,
-      compare,
+      product,
       edit_product,
+      reply,
+      profile,
       edit_profile,
       follow,
-      product,
-      profile,
-      reply,
+      compare,
     ],
     skills: [
       'Next.js',
@@ -101,10 +101,10 @@ const cards: Card[] = [
     },
     images: [
       ptj_cover,
-      apply_table,
-      ptj_edit_profile,
       noti_list,
       notification,
+      apply_table,
+      ptj_edit_profile,
       outdated_noti,
       seen_noti,
     ],
@@ -136,10 +136,10 @@ const cards: Card[] = [
     images: [
       blog_cover,
       blog_login,
+      blog_write,
       blog_main,
       blog_reply,
       blog_search,
-      blog_write,
     ],
     skills: [
       'Next.js',
