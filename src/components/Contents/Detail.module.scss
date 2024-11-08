@@ -10,6 +10,10 @@
   @include tablet {
     padding: 70px;
   }
+
+  @include mobile {
+    padding: 30px;
+  }
 }
 
 .container {
