@@ -11,6 +11,10 @@
 .wrapper {
   position: relative;
   width: 70%;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .image_box {
@@ -30,6 +34,10 @@
   height: 600px;
   object-fit: contain;
   cursor: pointer;
+
+  @include tablet {
+    height: 500px;
+  }
 }
 
 .arrow {

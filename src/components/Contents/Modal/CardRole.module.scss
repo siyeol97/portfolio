@@ -3,6 +3,11 @@
 .wrapper {
   @include flex($align: start);
   flex-direction: column;
+
+  @include tablet {
+    justify-content: start;
+    height: 535.4px;
+  }
 }
 
 .role_list {
