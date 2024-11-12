@@ -38,6 +38,10 @@
   @include tablet {
     height: 500px;
   }
+
+  @include mobile {
+    height: 350px;
+  }
 }
 
 .arrow {

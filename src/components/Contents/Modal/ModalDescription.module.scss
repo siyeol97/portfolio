@@ -13,4 +13,10 @@
     background-color: #121212;
     padding: 32px 70px;
   }
+
+  @include mobile {
+    padding: 30px;
+    height: auto;
+    gap: 1.5rem;
+  }
 }

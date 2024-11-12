@@ -33,4 +33,8 @@
   @include tablet {
     flex-direction: column;
   }
+
+  @include mobile {
+    gap: 2rem;
+  }
 }
