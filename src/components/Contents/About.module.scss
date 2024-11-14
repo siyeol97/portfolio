@@ -1,6 +1,19 @@
 @import '../../styles/main.scss';
 
+.svg1 {
+  position: absolute;
+  top: -130px;
+  right: -600px;
+  z-index: 0;
+  & .path1 {
+    fill: none;
+    stroke: #fff;
+  }
+}
+
 .title {
+  position: relative;
+  z-index: 1;
   text-align: center;
   & h1 {
     font-family: 'Montserrat';
@@ -57,6 +70,8 @@
   gap: 100px;
   padding: 100px 0 0;
   word-break: keep-all;
+  position: relative;
+  z-index: 1;
 
   & .overview_text {
     font-size: 1.125rem;
@@ -98,6 +113,8 @@
   padding: 50px 0 0;
   word-break: keep-all;
   width: 100%;
+  position: relative;
+  z-index: 1;
 
   & .contact_container {
     @include flex($justify: start, $align: start);
@@ -202,6 +219,8 @@
   @include flex($align: flex-start, $justify: flex-start);
   gap: 100px;
   padding: 50px 0 0;
+  position: relative;
+  z-index: 1;
   & span {
     font-size: 1rem;
     font-family: 'Montserrat';
