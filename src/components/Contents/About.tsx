@@ -28,14 +28,14 @@ export default function About() {
   };
 
   useEffect(() => {
-    const path1 = document.querySelector(`.${styles.path1}`) as SVGPathElement;
-    if (path1) {
-      const pathLength = path1.getTotalLength();
-      path1.style.strokeDasharray = `${pathLength} ${pathLength}`;
-      path1.style.strokeDashoffset = `${pathLength}`;
-      path1.getBoundingClientRect();
-      path1.style.transition = 'stroke-dashoffset 6s ease-in';
-      path1.style.strokeDashoffset = '0';
+    const path = document.querySelector(`.${styles.path}`) as SVGPathElement;
+    if (path) {
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+      path.style.strokeDashoffset = `${pathLength}`;
+      path.getBoundingClientRect();
+      path.style.transition = 'stroke-dashoffset 8s ease';
+      path.style.strokeDashoffset = '0';
     }
   }, []);
 
@@ -178,10 +178,10 @@ export default function About() {
         width='1920px'
         height='1080px'
         viewBox='0 0 1920 1080'
-        className={styles.svg1}
+        className={styles.svg}
       >
         <path
-          className={styles.path1}
+          className={styles.path}
           d='M1325.15,276.65c-8.62-5.78-17.58-11.13-27.13-15.19c-21.23-9.03-45.25-11.38-67.82-6.64
 		c-22.58,4.74-43.62,16.55-59.43,33.36c-8.32,8.85-15.37,19.43-18.37,29.2c0.2,8.65,9.87,14.97,18.42,13.65
 		c8.55-1.32,15.3-8.41,18.65-16.39c3.35-7.98,3.89-16.81,4.38-25.44c-8.89-1.45-16.24,6.51-21.72,13.66

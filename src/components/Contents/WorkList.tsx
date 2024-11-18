@@ -36,6 +36,7 @@ export default function WorkList() {
     <Detail
       backgroundColor='#121212'
       color='#f1f1f1'
+      overflow='visible'
     >
       <section
         className={`${styles.works_intro} ${isModal ? styles.active_modal : ''}`}
