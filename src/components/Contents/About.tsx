@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './About.module.scss';
 import Detail from './Detail';
 import skills from '../../data/skills';
@@ -26,6 +26,18 @@ export default function About() {
       }, 1500);
     });
   };
+
+  useEffect(() => {
+    const path1 = document.querySelector(`.${styles.path1}`) as SVGPathElement;
+    if (path1) {
+      const pathLength = path1.getTotalLength();
+      path1.style.strokeDasharray = `${pathLength} ${pathLength}`;
+      path1.style.strokeDashoffset = `${pathLength}`;
+      path1.getBoundingClientRect();
+      path1.style.transition = 'stroke-dashoffset 6s ease-in';
+      path1.style.strokeDashoffset = '0';
+    }
+  }, []);
 
   return (
     <Detail
