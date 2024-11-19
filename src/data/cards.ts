@@ -152,7 +152,8 @@ const cards: Card[] = [
     ],
     role: [
       'Next-auth를 이용한 일반 회원가입/로그인, 구글/깃허브 소셜 로그인 기능 구현',
-      '글 작성, 댓글 작성, 글 검색 기능 구현',
+      '글 작성, 수정, 삭제, 검색 기능 구현',
+      '댓글 작성, 수정, 삭제, 기능 구현',
       'React-markdown, React-syntax-highlighter를 이용한 글 본문, 작성 중 미리보기 기능 구현',
       'React-query의 optimistic update를 이용한 글 좋아요 버튼 구현',
     ],
