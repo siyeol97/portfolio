@@ -152,10 +152,13 @@ const cards: Card[] = [
     ],
     role: [
       'Next-auth를 이용한 일반 회원가입/로그인, 구글/깃허브 소셜 로그인 기능 구현',
+      'MongoDB를 이용한 글, 댓글, 태그, 사용자 정보 저장 및 관리',
       '글 작성, 수정, 삭제, 검색 기능 구현',
       '댓글 작성, 수정, 삭제, 기능 구현',
-      'React-markdown, React-syntax-highlighter를 이용한 글 본문, 작성 중 미리보기 기능 구현',
-      'React-query의 optimistic update를 이용한 글 좋아요 버튼 구현',
+      'React-query를 이용한 글 목록, 댓글 목록, 태그 목록 등 데이터 fetch 및 상태 관리',
+      'React-markdown, React-syntax-highlighter를 이용한 markdown 형식 글 작성 및 렌더링',
+      'rehype-sanitize 라이브러리를 이용하여 markdown 내용을 HTML로 변환할 때 발생할 수 있는 XSS 공격 방지 ',
+      'React-query의 optimistic update를 이용한 좋아요 버튼 구현',
     ],
     introduce: [
       'Github, Google 계정으로 로그인할 수 있습니다.',
