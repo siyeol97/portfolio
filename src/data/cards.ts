@@ -157,7 +157,7 @@ const cards: Card[] = [
       '댓글 작성, 수정, 삭제, 기능 구현',
       'React-query를 이용한 글 목록, 댓글 목록, 태그 목록 등 데이터 fetch 및 상태 관리',
       'React-markdown, React-syntax-highlighter를 이용한 markdown 형식 글 작성 및 렌더링',
-      'Next.js의 middleware를 이용하여 로그인 여부에 따른 글 작성/수정 페이지 접근 제어',
+      'Next.js의 middleware를 이용하여 로그인 여부에 따른 페이지 접근 제어',
       'rehype-sanitize 라이브러리를 이용하여 markdown 내용을 HTML로 변환할 때 발생할 수 있는 XSS 공격 방지 ',
       'React-query의 optimistic update를 이용한 좋아요 버튼 구현',
     ],
