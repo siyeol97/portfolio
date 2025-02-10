@@ -33,28 +33,28 @@ import notification from '../public/party-time-job/notification.png';
 import outdated_noti from '../public/party-time-job/outdated_noti.png';
 import seen_noti from '../public/party-time-job/seen_noti.png';
 
-export interface Card {
-  info: {
-    title: string;
-    description: string;
-    period: string;
-  };
+export interface ProjectType {
+  title: string;
+  description: string;
+  period: string;
   images: string[];
-  skills: string[];
+  skills: { name: string; backgroundColor: string; color?: string }[];
   role: string[];
   introduce: string[];
   url: string;
   repository: string;
 }
 
-const cards: Card[] = [
-  {
-    info: {
-      title: 'mogazoa',
-      description:
-        '음악, 식당, 영화, 전자기기, 호텔, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼',
-      period: '2024.04.11 ~ 2024.05.17',
-    },
+export interface Projects {
+  [key: string]: ProjectType;
+}
+
+const projects: Projects = {
+  mogazoa: {
+    title: 'mogazoa',
+    description:
+      '음악, 식당, 영화, 전자기기, 호텔, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼',
+    period: '2024.04.11 ~ 2024.05.17',
     images: [
       cover,
       add_product,
@@ -67,19 +67,19 @@ const cards: Card[] = [
       compare,
     ],
     skills: [
-      'Next.js',
-      'TypeScript',
-      'Zustand',
-      'React-query',
-      'SCSS',
-      'EsLint/Prettier',
+      { name: 'Next.js', backgroundColor: '#000000' },
+      { name: 'TypeScript', backgroundColor: '#3178C6' },
+      { name: 'Zustand', backgroundColor: '#E34F26' },
+      { name: 'Tanstack-query', backgroundColor: '#F26F28' },
+      { name: 'SCSS', backgroundColor: '#CD6799' },
+      { name: 'EsLint/Prettier', backgroundColor: '#4B32C3' },
     ],
     role: [
       '유저 프로필 페이지 담당, pc, tablet, mobile 반응형 디자인',
       'Zustand를 이용한 모달창의 전역 상태 관리',
       'Button, Modal, ProductCard 재사용 컴포넌트 설계 및 구현',
       '유저 프로필 페이지에 서버 사이드 렌더링 적용으로 초기 로딩 속도 개선',
-      'React-Query의 useMutation, useInfiniteQuery를 사용하여 팔로우/팔로우 취소, 팔로워 목록, 상품목록 무한 스크롤 기능 구현',
+      'Tanstack-Query의 useMutation, useInfiniteQuery를 사용하여 팔로우/팔로우 취소, 팔로워 목록, 상품목록 무한 스크롤 기능 구현',
       'React-hook-form을 활용하여 유저 프로필 정보 수정 및 상품 추가/수정 기능 구현',
       '인증 및 공유 기능 - 카카오 간편 로그인/회원가입 및 콘텐츠 공유 기능 구현',
     ],
@@ -93,12 +93,10 @@ const cards: Card[] = [
     url: 'https://mogazoa4-1.vercel.app/',
     repository: 'https://github.com/Codeit-FE3-Part4-team1-Final/Mogazoa',
   },
-  {
-    info: {
-      title: 'party-time-job',
-      description: '일자리가 급한 사람들을 위한 구인, 구직 플랫폼',
-      period: '2024.03.07 ~ 2024.03.25',
-    },
+  party_time_job: {
+    title: 'party-time-job',
+    description: '일자리가 급한 사람들을 위한 구인, 구직 플랫폼',
+    period: '2024.03.07 ~ 2024.03.25',
     images: [
       ptj_cover,
       noti_list,
@@ -108,7 +106,13 @@ const cards: Card[] = [
       outdated_noti,
       seen_noti,
     ],
-    skills: ['Next.js', 'TypeScript', 'Tailwind', 'Husky', 'EsLint/Prettier'],
+    skills: [
+      { name: 'Next.js', backgroundColor: '#000000' },
+      { name: 'TypeScript', backgroundColor: '#3178C6' },
+      { name: 'Tailwind', backgroundColor: '#38B2AC' },
+      { name: 'Husky', backgroundColor: '#333236' },
+      { name: 'EsLint/Prettier', backgroundColor: '#4B32C3' },
+    ],
     role: [
       '공고 카드, 공고 리스트, 공고 상세정보 재사용 컴포넌트 설계 및 구현',
       'pc, tablet, mobile 반응형 디자인',
@@ -127,12 +131,10 @@ const cards: Card[] = [
     url: 'https://party-time-job-deploy.vercel.app/',
     repository: 'https://github.com/Party-Time-Job/Party-Time-Job',
   },
-  {
-    info: {
-      title: `Siyeol's Dev-log`,
-      description: '개인 블로그',
-      period: '2024.02.11 ~ in progress',
-    },
+  blog: {
+    title: `Siyeol's Dev-log`,
+    description: '개인 블로그',
+    period: '2024.02.11 ~ in progress',
     images: [
       blog_cover,
       blog_login,
@@ -142,20 +144,21 @@ const cards: Card[] = [
       blog_search,
     ],
     skills: [
-      'Next.js',
-      'TypeScript',
-      'React-syntax-highlighter',
-      'React-markdown',
-      'React-query',
-      'MongoDB',
-      'EsLint/Prettier',
+      { name: 'Next.js', backgroundColor: '#000000' },
+      { name: 'TypeScript', backgroundColor: '#3178C6' },
+      { name: 'React-syntax-highlighter', backgroundColor: '#333236' },
+      { name: 'React-markdown', backgroundColor: '#333236' },
+      { name: 'Tanstack-query', backgroundColor: '#F26F28' },
+      { name: 'rehype-sanitize', backgroundColor: '#333236' },
+      { name: 'MongoDB', backgroundColor: '#4DB33D' },
+      { name: 'EsLint/Prettier', backgroundColor: '#4B32C3' },
     ],
     role: [
       'Next-auth를 이용한 일반 회원가입/로그인, 구글/깃허브 소셜 로그인 기능 구현',
       'MongoDB를 이용한 글, 댓글, 태그, 사용자 정보 저장 및 관리',
       '글 작성, 수정, 삭제, 검색 기능 구현',
       '댓글 작성, 수정, 삭제, 기능 구현',
-      'React-query를 이용한 글 목록, 댓글 목록, 태그 목록 등 데이터 fetch 및 상태 관리',
+      'Tanstack-query를 이용한 글 목록, 댓글 목록, 태그 목록 등 데이터 fetch 및 상태 관리',
       'React-markdown, React-syntax-highlighter를 이용한 markdown 형식 글 작성 및 렌더링',
       'Next.js의 middleware를 이용하여 로그인 여부에 따른 페이지 접근 제어',
       'rehype-sanitize 라이브러리를 이용하여 markdown 내용을 HTML로 변환할 때 발생할 수 있는 XSS 공격 방지 ',
@@ -170,13 +173,11 @@ const cards: Card[] = [
     url: 'https://siyeol-blog.vercel.app/',
     repository: 'https://github.com/siyeol97/siyeol-blog',
   },
-  {
-    info: {
-      title: '등잔 밑 일기',
-      description:
-        '사용자가 입력한 음성과 텍스트를 이용한 감정, 우울감 분석 일기 어플리케이션',
-      period: '2023.04.27 ~ 2023.06.22',
-    },
+  diary: {
+    title: '등잔 밑 일기',
+    description:
+      '사용자가 입력한 음성과 텍스트를 이용한 감정, 우울감 분석 일기 어플리케이션',
+    period: '2023.04.27 ~ 2023.06.22',
     images: [
       diary_cover,
       diary_write,
@@ -185,12 +186,14 @@ const cards: Card[] = [
       diary_process,
     ],
     skills: [
-      'JavaScript',
-      'React-Native, Expo',
-      'Python',
-      'PyTorch',
-      'Tensorflow',
-      'Flask',
+      { name: 'JavaScript', backgroundColor: '#F7DF1E', color: '#000000' },
+      { name: 'React-Native', backgroundColor: '#61DAFB', color: '#000000' },
+      { name: 'Expo', backgroundColor: '#000020' },
+      { name: 'Python', backgroundColor: '#3776AB' },
+      { name: 'PyTorch', backgroundColor: '#EE4C2C' },
+      { name: 'Tensorflow', backgroundColor: '#FF6F00' },
+      { name: 'Flask', backgroundColor: '#000000' },
+      { name: 'Google Cloud STT', backgroundColor: '#4285F4' },
     ],
     role: [
       'KoBERT 모델을 활용하여 사용자의 일기 내용을 기반으로 감정 분석 및 챗봇 응답 AI 모델 훈련',
@@ -210,6 +213,6 @@ const cards: Card[] = [
     url: '',
     repository: 'https://github.com/siyeol97/Diary',
   },
-];
+};
 
-export default cards;
+export default projects;

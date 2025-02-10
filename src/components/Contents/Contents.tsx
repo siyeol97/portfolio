@@ -1,7 +1,8 @@
 import styles from './Contents.module.scss';
 import About from './About';
-import WorkList from './WorkList';
+// import WorkList from './WorkList';
 import { Analytics } from '@vercel/analytics/react';
+import Projects from '../Project/Projects';
 
 export default function Contents() {
   return (
@@ -9,7 +10,8 @@ export default function Contents() {
       <Analytics />
       <main className={styles.wrapper}>
         <About />
-        <WorkList />
+        <Projects />
+        {/* <WorkList /> */}
       </main>
     </>
   );

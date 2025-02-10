@@ -1,0 +1,112 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.vertical_line {
+  flex-shrink: 0;
+  width: 1px;
+  background-color: #f1f1f1;
+  margin-right: 16px;
+}
+
+.period {
+  margin-right: 40px;
+  font-family: 'Montserrat';
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.project_content_container {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.project_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 14px;
+}
+
+.project_title {
+  font-family: 'Montserrat';
+  line-height: normal;
+  font-weight: 700;
+  color: white;
+}
+
+.visit_button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  z-index: 1;
+  transition: all 0.5s;
+
+  & .image {
+    width: 16px;
+    height: 16px;
+  }
+
+  &::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    border-color: #5534da;
+    transition: all 0.5s;
+    &::after {
+      width: 100%;
+      background-color: #5534da;
+      transition: all 0.5s;
+      z-index: -1;
+    }
+  }
+}
+
+.project_description {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.skill_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.list_container {
+  margin-bottom: 28px;
+}
+
+.list_title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.list_item {
+  margin-bottom: 8px;
+  &::before {
+    content: '•';
+    color: #f1f1f1;
+    margin-right: 6px;
+  }
+}
