@@ -16,7 +16,7 @@ export default function Project({ project }: Props) {
       <span className={styles.period}>{project.period}</span>
       <article className={styles.project_content_container}>
         <div className={styles.project_header}>
-          {project.title === '등잔 밑 일기' ? (
+          {project.title === '등잔밑일기' ? (
             <h3
               className={styles.project_title}
               style={{ fontFamily: 'Pretendard' }}

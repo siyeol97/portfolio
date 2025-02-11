@@ -174,7 +174,7 @@ const projects: Projects = {
     repository: 'https://github.com/siyeol97/siyeol-blog',
   },
   diary: {
-    title: '등잔 밑 일기',
+    title: '등잔밑일기',
     description:
       '사용자가 입력한 음성과 텍스트를 이용한 감정, 우울감 분석 일기 어플리케이션',
     period: '2023.04.27 ~ 2023.06.22',

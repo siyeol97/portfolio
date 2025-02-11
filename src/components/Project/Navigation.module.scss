@@ -1,0 +1,71 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  font-size: 14px;
+  height: 300px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.list_container {
+  position: relative;
+  right: 28px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
+  visibility: hidden;
+  pointer-events: auto;
+}
+
+.title {
+  color: #f1f1f1;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+.line {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #f1f1f1;
+  pointer-events: auto;
+}
+
+.dot_container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  position: relative;
+  right: -3.5px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.dot:hover + .list_container,
+.wrapper:hover .list_container {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+  pointer-events: auto;
+}

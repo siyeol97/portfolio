@@ -6,6 +6,7 @@ interface Props {
   backgroundColor?: string;
   children: ReactNode;
   overflow?: string;
+  id?: string;
 }
 
 export default function Detail({
@@ -13,6 +14,7 @@ export default function Detail({
   backgroundColor,
   children,
   overflow,
+  id,
 }: Props) {
   return (
     <section
@@ -22,6 +24,7 @@ export default function Detail({
         color: color,
         overflow: overflow,
       }}
+      id={id}
     >
       <div className={styles.container}>{children}</div>
     </section>

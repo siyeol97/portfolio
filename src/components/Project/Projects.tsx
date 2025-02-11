@@ -4,16 +4,25 @@ import Project from './Project';
 import projects from '../../data/projects';
 
 export default function Projects() {
+  const titles = [];
+  for (const title in projects) {
+    titles.push(title);
+  }
+
   return (
     <Detail
       backgroundColor='#121212'
       color='#f1f1f1'
     >
       <h1 className={styles.main_header}>Projects</h1>
-      <Project project={projects.mogazoa} />
-      <Project project={projects.party_time_job} />
-      <Project project={projects.blog} />
-      <Project project={projects.diary} />
+      {titles.map((title) => {
+        return (
+          <Project
+            key={title}
+            project={projects[title]}
+          />
+        );
+      })}
     </Detail>
   );
 }
