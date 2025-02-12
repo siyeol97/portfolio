@@ -20,6 +20,7 @@ export default function Projects() {
           <Project
             key={title}
             project={projects[title]}
+            id={title}
           />
         );
       })}

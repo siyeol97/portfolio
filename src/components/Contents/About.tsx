@@ -43,6 +43,7 @@ export default function About() {
     <Detail
       color='#f1f1f1'
       backgroundColor='#121212'
+      id='overview'
     >
       <section className={styles.title}>
         <h1>ALWAYS TRYING</h1>
@@ -73,76 +74,94 @@ export default function About() {
         </div>
         <article className={styles.contact_container}>
           <div className={styles.contact_box}>
-            <img
-              src={mailIcon}
-              alt='mail-icon'
-            />
-            <span
-              className={styles.contact_text}
-              id='email'
-            >
-              leesi2830@gmail.com
-            </span>
-            <img
-              src={copyIcon}
-              alt='copy-icon'
-              className={styles.sub_icon}
-              onClick={() => handleCopy('email')}
-            />
-            <div
-              className={`${styles.copy_success} ${copyID === 'email' ? styles.show : ''}`}
-            >
-              복사 완료
+            <div className={styles.contact_title}>
               <img
-                src={checkIcon}
-                alt='check-icon'
-                className={styles.check_icon}
+                src={mailIcon}
+                alt='mail-icon'
+                className={styles.main_icon}
               />
+              <span>이메일</span>
+            </div>
+            <div>
+              <span
+                className={styles.contact_text}
+                id='email'
+              >
+                leesi2830@gmail.com
+                <img
+                  src={copyIcon}
+                  alt='copy-icon'
+                  className={styles.sub_icon}
+                  onClick={() => handleCopy('email')}
+                />
+                <div
+                  className={`${styles.copy_success} ${copyID === 'email' ? styles.show : ''}`}
+                >
+                  복사 완료
+                  <img
+                    src={checkIcon}
+                    alt='check-icon'
+                    className={styles.check_icon}
+                  />
+                </div>
+              </span>
             </div>
           </div>
           <div className={styles.contact_box}>
-            <img
-              src={callIcon}
-              alt='call-icon'
-            />
+            <div className={styles.contact_title}>
+              <img
+                src={callIcon}
+                alt='call-icon'
+                className={styles.main_icon}
+              />
+              <span>연락처</span>
+            </div>
             <span
               className={styles.contact_text}
               id='phone'
             >
               010-5443-2830
-            </span>
-            <img
-              src={copyIcon}
-              alt='copy-icon'
-              className={styles.sub_icon}
-              onClick={() => handleCopy('phone')}
-            />
-            <div
-              className={`${styles.copy_success} ${copyID === 'phone' ? styles.show : ''}`}
-            >
-              복사 완료
               <img
-                src={checkIcon}
-                alt='check-icon'
-                className={styles.check_icon}
+                src={copyIcon}
+                alt='copy-icon'
+                className={styles.sub_icon}
+                onClick={() => handleCopy('phone')}
               />
-            </div>
+              <div
+                className={`${styles.copy_success} ${copyID === 'phone' ? styles.show : ''}`}
+              >
+                복사 완료
+                <img
+                  src={checkIcon}
+                  alt='check-icon'
+                  className={styles.check_icon}
+                />
+              </div>
+            </span>
           </div>
           <a
             href='https://github.com/siyeol97'
             target='_blank'
           >
             <div className={styles.contact_box}>
-              <img
-                src={githubIcon}
-                alt='github-icon'
-              />
-              <span className={styles.contact_text}>github - siyeol97</span>
-              <img
-                src={openIcon}
-                alt='open-icon'
-                className={styles.sub_icon}
-              />
+              <div className={styles.contact_title}>
+                <img
+                  src={githubIcon}
+                  alt='github-icon'
+                  className={styles.main_icon}
+                />
+                <span>깃허브</span>
+              </div>
+              <span
+                className={`${styles.contact_text} ${styles.contact_github}`}
+              >
+                github - siyeol97
+                <img
+                  src={openIcon}
+                  alt='open-icon'
+                  className={styles.sub_icon}
+                />
+              </span>
             </div>
           </a>
         </article>

@@ -7,11 +7,15 @@ import ImageCarousel from './ImageCarousel';
 
 interface Props {
   project: ProjectType;
+  id: string;
 }
 
-export default function Project({ project }: Props) {
+export default function Project({ project, id }: Props) {
   return (
-    <section className={styles.wrapper}>
+    <section
+      className={styles.wrapper}
+      id={id}
+    >
       <div className={styles.vertical_line}></div>
       <span className={styles.period}>{project.period}</span>
       <article className={styles.project_content_container}>
